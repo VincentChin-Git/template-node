@@ -1,4 +1,5 @@
-import { Context } from 'koa'
+import type { Context } from 'koa'
+
 import * as TestServide from '../services/test'
 
 export const test = async (ctx: Context) => {

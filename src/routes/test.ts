@@ -1,7 +1,7 @@
 import Router from 'koa-router'
 
-import { routePrefix } from './prefix'
 import { test } from '../controllers/test'
+import { routePrefix } from './prefix'
 
 const v1 = new Router({ prefix: routePrefix + '/tests' })
 

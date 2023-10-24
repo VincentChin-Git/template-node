@@ -1,7 +1,6 @@
 import * as Jwt from 'jsonwebtoken'
 
 import { TokenVerifyFail } from '../config/errorMsg/_general'
-
 import throwError from './throwError'
 
 export const generateTokens = ({

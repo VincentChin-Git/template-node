@@ -1,16 +1,15 @@
 import type { Context, Middleware, Next } from 'koa'
 
-import throwError from '../utils/throwError'
-
-import EnvConfig from '../config/env'
+// import EnvConfig from '../config/env'
 import { TokenVerifyFail } from '../config/errorMsg/_general'
-import { verifyToken } from '../utils/token'
+import throwError from '../utils/throwError'
+// import { verifyToken } from '../utils/token'
 
 const JwtVerify: Middleware = async (ctx: Context, next: Next) => {
     if (ctx.method == 'OPTIONS') {
         await next()
     } else {
-        let tokenError = false
+        const tokenError = false
         // try {
         //     const BearerToken = ctx.request.header.authorization || ''
         //     const { decoded } = verifyToken({

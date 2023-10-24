@@ -1,9 +1,9 @@
+import type { Context } from 'koa'
 import Compose from 'koa-compose'
 import type { IMiddleware } from 'koa-router'
+import Router from 'koa-router'
 
 import TestRouter from './test'
-import Router from 'koa-router'
-import { Context } from 'koa'
 
 const initRouter = new Router({ prefix: '' })
 initRouter.get('/', (ctx: Context) => {
