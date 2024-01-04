@@ -1,7 +1,7 @@
-import { config } from 'dotenv'
+import dotenv from 'dotenv'
 import path from 'path'
-const { parsed = {} } = config({
-    path: path.join(__dirname, `../../../.env.${process.env.NODE_ENV}`),
+const { parsed = {} } = dotenv.config({
+  path: path.join(__dirname, `../../../.env.local`),
 })
 
 export default parsed
